@@ -9,5 +9,6 @@ namespace WebApplication3.Contexto
         public DbSet<Universidad> universidad { get; set; }
         public DbSet<Estudiante> estudiante { get; set; }
         public DbSet<Docente> docente { get; set; }
+        public DbSet<Materias> materias { get; set; }
     }
 }
