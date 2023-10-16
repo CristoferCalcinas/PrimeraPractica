@@ -4,17 +4,15 @@ using WebApplication3.Modelo;
 
 namespace WebApplication3.Controllers
 {
-    public class MateriasController
+    [ApiController]
+    [Route("[controller]")]
+    public class MateriasController : ControllerBase
     {
 
-        [ApiController]
-        [Route("[controller]")]
-        public class EstudianteController : ControllerBase
-        {
-            private readonly ILogger<EstudianteController> _logger;
+            private readonly ILogger<MateriasController> _logger;
             private readonly AplicacionContexto _aplicacionContexto;
 
-            public EstudianteController(ILogger<EstudianteController> logger, AplicacionContexto aplicacionContexto)
+            public MateriasController(ILogger<MateriasController> logger, AplicacionContexto aplicacionContexto)
             {
                 _logger = logger;
                 _aplicacionContexto = aplicacionContexto;
@@ -54,5 +52,5 @@ namespace WebApplication3.Controllers
             }
 
         }
-    }
+    
 }
